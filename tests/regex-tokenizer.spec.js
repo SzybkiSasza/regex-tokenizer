@@ -1,7 +1,7 @@
 define(function(require) {
   'use strict';
 
-  var tokenizer = require('commons/regex-tokenizer');
+  var tokenizer = require('js/regex-tokenizer');
 
   describe('Regex Tokenizer', function() {
 

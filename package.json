@@ -1,0 +1,30 @@
+{
+  "name": "regextokenizer",
+  "version": "0.0.1",
+  "author": "SzybkiSasza",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SzybkiSasza/regextokenizer"
+  },
+  "keywords": [
+    "regexp",
+    "string",
+    "matching",
+    "token"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.3.1",
+    "jasmine-core": "^2.3.4",
+    "jquery": "^2.1.4",
+    "karma": "^0.12.35",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-requirejs": "^0.2.2",
+    "phantomjs": "^1.9.17",
+    "requirejs": "^2.1.18"
+  },
+  "license": "MIT"
+}
