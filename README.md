@@ -6,12 +6,14 @@ Its main use is to:
  - Break regex into proper parts (creating expression tree - so called token)
  - Validate string against token- as opposed to normal regexp validation, it makes possible for string to be matched up to regexp parts
 
-Whole module is in general rewritten jquery.inputmask plugin from ([RobinHerbots InputMask]https://github.com/RobinHerbots/jquery.inputmask) for standalone use.
+Whole module is in general rewritten jquery.inputmask plugin from [RobinHerbots InputMask](https://github.com/RobinHerbots/jquery.inputmask) for standalone use.
+
+Library depends only on Jquery and is written as AMD module.
 
 ### Methods
 
     RegexTokenizer()
-Constructor. Builds special tokenizer regexp. Regexp based on ([slevithan/regex-colorizer]https://github.com/slevithan/regex-colorizer)
+Constructor. Builds special tokenizer regexp. Regexp based on [slevithan/regex-colorizer](https://github.com/slevithan/regex-colorizer)
 
     analyzeRegex(regex)
 Analyzes given regex and breaks it into token. Returns special token  object.
@@ -22,6 +24,8 @@ Validates given string using given token. Arguments are as follows:
  - **fromGroup** - information about whether tokenValidator comes from group or normal regexp
  - **tokenValidator** - Special token validator object or string. It is usually string. special object could be used when user wants to match string against particular part of the token.
 
+### Tests
+Just run `npm install && karma start` from within app directory
 
 ### Examples (taken from tests)
 **Simple Regexp**
@@ -52,4 +56,4 @@ Validates given string using given token. Arguments are as follows:
     tokenizer.validateRegexToken(tokens, false, 'rest'); // Returns false
     tokenizer.validateRegexToken(tokens, false, 'testabf'); // Returns false
     tokenizer.validateRegexToken(tokens, false, 'testacagb');  // Returns true
-    tokenizer.validateRegexToken(tokens, false, 'testacavstanb');  // Returns true 
+    tokenizer.validateRegexToken(tokens, false, 'testacavstanb');  // Returns true
